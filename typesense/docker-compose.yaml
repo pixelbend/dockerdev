@@ -1,7 +1,7 @@
 services:
   typesense:
     container_name: typesense
-    image: typesense/typesense:27.0
+    image: typesense/typesense:28.0
     restart: always
     environment:
       TYPESENSE_DATA_DIR: /data
