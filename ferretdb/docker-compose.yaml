@@ -1,0 +1,24 @@
+services:
+  postgres:
+    container_name: postgres
+    image: ghcr.io/ferretdb/postgres-documentdb:16
+    restart: always
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql/data
+
+  ferretdb:
+    container_name: ferretdb
+    image: ghcr.io/ferretdb/ferretdb:2
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      FERRETDB_POSTGRESQL_URL: postgres://dev:dev@postgres:5432/postgres
+
+volumes:
+  data:
