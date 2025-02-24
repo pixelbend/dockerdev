@@ -19,7 +19,7 @@ services:
 
   supertokens:
     container_name: supertokens
-    image: registry.supertokens.io/supertokens/supertokens-mysql:9.1.1
+    image: registry.supertokens.io/supertokens/supertokens-mysql:latest
     restart: always
     depends_on:
       - mysql
