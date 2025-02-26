@@ -6,8 +6,10 @@ services:
     environment:
       YSQL_USER: dev
       YSQL_PASSWORD: dev
+      YSQL_DB: dev
       YCQL_USER: dev
       YCQL_PASSWORD: dev
+      YCQL_KEYSPACE: dev
     command: >
       bin/yugabyted start
       --base_dir=/home/yugabyte/yb_data
