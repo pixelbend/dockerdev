@@ -5,7 +5,7 @@ services:
     restart: always
     command: redis-server --requirepass dev --save 60 1 --appendonly yes
     ports:
-      - 6379:6379
+      - "6379:6379"
     volumes:
       - data:/data
 

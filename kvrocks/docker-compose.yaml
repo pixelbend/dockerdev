@@ -6,7 +6,7 @@ services:
     environment:
       KVROCKS_ADMIN_SECRET: dev
     ports:
-      - 6666:6666
+      - "6666:6666"
     volumes:
       - data:/var/lib/kvrocks
 

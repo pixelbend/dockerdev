@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: dev
       POSTGRES_DB: supertokens
     ports:
-      - 5432:5432
+      - "5432:5432"
     networks:
       - app_network
     healthcheck:
@@ -28,7 +28,7 @@ services:
     environment:
       POSTGRESQL_CONNECTION_URI: postgresql://dev:dev@postgres:5432/supertokens
     ports:
-      - 3567:3567
+      - "3567:3567"
     networks:
       - app_network
     healthcheck:

@@ -9,8 +9,8 @@ services:
       MERCURE_SUBSCRIBER_JWT_KEY: dev
     command: /usr/bin/caddy run --config /etc/caddy/Caddyfile.dev
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     volumes:
       - data:/data
       - config:/config

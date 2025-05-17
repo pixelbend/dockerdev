@@ -8,7 +8,7 @@ services:
       TYPESENSE_API_KEY: dev
       TYPESENSE_ENABLE_CORS: true
     ports:
-      - 8108:8108
+      - "8108:8108"
     volumes:
       - data:/data
 

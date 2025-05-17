@@ -19,7 +19,7 @@ services:
       ZITADEL_EXTERNALSECURE: false
     command: start-from-init --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode disabled
     ports:
-      - 8080:8080
+      - "8080:8080"
     networks:
       - zitadel
     ## default credentials
@@ -46,7 +46,7 @@ services:
         "max_replication_slots=10",
       ]
     ports:
-      - 5432:5432
+      - "5432:5432"
     networks:
       - zitadel
     volumes:

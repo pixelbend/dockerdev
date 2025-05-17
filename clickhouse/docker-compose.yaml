@@ -9,8 +9,8 @@ services:
       CLICKHOUSE_USER: dev
       CLICKHOUSE_PASSWORD: dev
     ports:
-      - 8123:8123
-      - 9000:9000
+      - "8123:8123"
+      - "9000:9000"
     volumes:
       - data:/var/lib/clickhouse
       - logs:/var/log/clickhouse-server

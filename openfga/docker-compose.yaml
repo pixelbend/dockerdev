@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: dev
     ports:
-      - 5432:5432
+      - "5432:5432"
     networks:
       - default
     volumes:
@@ -43,9 +43,9 @@ services:
       OPENFGA_DATASTORE_URI: postgres://dev:dev@postgres:5432/postgres?sslmode=disable
     command: run
     ports:
-      - 8080:8080
-      - 8081:8081
-      - 3000:3000
+      - "8080:8080"
+      - "8081:8081"
+      - "3000:3000"
     networks:
       - default
 

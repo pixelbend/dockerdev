@@ -9,7 +9,7 @@ services:
       - --encryptionEnv #optional
       - ENCRYPTION #optional
     ports:
-      - 8090:8090
+      - "8090:8090"
     volumes:
       - data:/pb_data
       - data:/pb_public #optional

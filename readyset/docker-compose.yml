@@ -9,4 +9,4 @@ services:
       PROMETHEUS_METRICS: true
       STANDALONE: true
     ports:
-      - 5433:5433
+      - "5433:5433"
