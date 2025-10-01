@@ -1,6 +1,5 @@
 services:
   pocketbase:
-
     container_name: pocketbase
     image: ghcr.io/muchobien/pocketbase:latest
     restart: always
@@ -19,22 +18,11 @@ services:
         test:
             [
                 "CMD",
-
                 "wget",
-
                 "--no-verbose",
-
                 "--tries=1",
-
-
                 "--spider",
-
-
-
                 "http://localhost:8090/api/health",
-
-
-
             ]
         interval: 30s
         timeout: 10s
@@ -43,10 +31,3 @@ services:
 
 volumes:
   data:
-
-
-
-
-
-
-
