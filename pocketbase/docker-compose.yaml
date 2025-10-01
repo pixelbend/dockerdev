@@ -1,12 +1,13 @@
 services:
   pocketbase:
+
     container_name: pocketbase
     image: ghcr.io/muchobien/pocketbase:latest
     restart: always
     environment:
       PB_HOST: 0.0.0.0
       PB_PORT: 8090
-      PB_ADMIN_EMAIL: dev
+      PB_ADMIN_EMAIL: dev@gmail.com
       PB_ADMIN_PASSWORD: dev
     ports:
       - "8090:8090"
@@ -18,11 +19,22 @@ services:
         test:
             [
                 "CMD",
+
                 "wget",
+
                 "--no-verbose",
+
                 "--tries=1",
+
+
                 "--spider",
+
+
+
                 "http://localhost:8090/api/health",
+
+
+
             ]
         interval: 30s
         timeout: 10s
@@ -31,3 +43,10 @@ services:
 
 volumes:
   data:
+
+
+
+
+
+
+
