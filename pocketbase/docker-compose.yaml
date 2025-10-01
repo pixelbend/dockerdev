@@ -7,27 +7,15 @@ services:
       PB_HOST: 0.0.0.0
       PB_PORT: 8090
       PB_ADMIN_EMAIL: dev@gmail.com
-      PB_ADMIN_PASSWORD: dev
+      PB_ADMIN_PASSWORD: dev@gmail.com
     ports:
       - "8090:8090"
     volumes:
       - data:/pb_data
-      - data:/pb_public #optional
-      - data:/pb_hooks
-    healthcheck:
-        test:
-            [
-                "CMD",
-                "wget",
-                "--no-verbose",
-                "--tries=1",
-                "--spider",
-                "http://localhost:8090/api/health",
-            ]
-        interval: 30s
-        timeout: 10s
-        retries: 3
-        start_period: 30s
+      - public:/pb_public #optional
+      - hooks:/pb_hooks
 
 volumes:
   data:
+  public:
+  hooks:
